@@ -55,3 +55,8 @@ pytest
 At the endpoint of / users has an option to pass a filter on the search. This filter must be sent in the same format as ansi sql. 
 Ex: (first_name = 'test' and last_name = 'test 2') or (email = 'teste@teste.com')
 ```
+
+### Deployed
+```
+The project is running in aws in this address http://18.191.237.232/docs
+```
