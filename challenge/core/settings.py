@@ -6,7 +6,6 @@ class Settings(BaseSettings):
     API_V1_STR: str = "/api/v1"
     PROJECT_NAME: str = "Qulture Challenge"
     SQLALCHEMY_DATABASE_URI: str = None
-    SQLALCHEMY_DATABASE_URL: str = "sqlite:///test.db"
 
     @validator("SQLALCHEMY_DATABASE_URI", pre=True)
     def assemble_db_connection(
@@ -18,9 +17,9 @@ class Settings(BaseSettings):
             return v
         return PostgresDsn.build(
             scheme="postgresql",
-            user="tulio",
-            password="tulio",
-            host="localhost",
+            user="",
+            password="",
+            host="",
             path="/qulture",
         )
 
